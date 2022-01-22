@@ -1,0 +1,63 @@
+body {
+	background-color: #3d414f;
+}
+h1 {
+	text-align: center;
+  	color: #EFEFF2;
+  	font-family: verdana;
+  	font-size: 300%;
+}
+h2 {
+	color: #EFEFF2;
+	text-align: center;
+	font-size: 3rem;
+}
+h3 {
+	color: #cbcbd6;
+	text-align: center;
+	font-size: 200%;
+}
+a{
+	color: lightgreen;
+}
+.kalimat1 {
+	text-align: center;
+	color: #ff8796;
+	font-family: courier;
+	font-size: 160%;
+	margin: 110px 10px 20px 50px;
+	border: 2px solid;
+}
+.kalimat2 {
+	text-align: center;
+	color: green;
+  	font-family: verdana;
+  	font-size: 100%;
+  	margin: 150px 10px 20px 50px;
+}		
+.judul {
+	margin: 150px 50px 50px 50px;
+}
+.button {
+	background-color: #4caf50 ;
+	border: 2px solid darkred;
+	color: #d8dced;
+	padding: 15px 32px;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+}
+.tombol {
+	text-align: center;
+}
+.footer {
+	position: fixed;
+	font-size: 20px;
+	left: 0;
+	buttom: 0;
+	width: 100%;
+	background-color: #481c57;
+	color: white;
+	text-align: center;
+	margin: 0px 50px 50px 10px;
+}
