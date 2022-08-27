@@ -317,6 +317,28 @@ h5,
   -ms-transform: translate(-40%, -50%);
   transform: translate(-40%, -50%);
 }
+.play-single-small {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  border: 2px solid #fff;
+  color: #fff !important;
+  border-radius: 50%;
+  position: relative;
+  -webkit-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+.play-single-small > span {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-40%, -50%);
+  -ms-transform: translate(-40%, -50%);
+  transform: translate(-40%, -50%);
+}
+
 .play-single-big:hover {
   background: rgba(255, 255, 255, 0.2);
   width: 90px;

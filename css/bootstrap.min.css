@@ -8571,6 +8571,10 @@ button.bg-dark:hover {
 .font-weight-light {
   font-weight: 300 !important;
 }
+.font-weight-light-kecil {
+  font-size:medium !important;
+  font-weight: 00 !important;
+}
 .font-weight-normal {
   font-weight: 400 !important;
 }
