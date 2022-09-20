@@ -773,7 +773,7 @@ textarea.form-control {
 .work-section {
   margin-top: 330px;
   padding-top: 200px !important;
-  padding-bottom: 90px !important;
+  padding-bottom: 150px !important;
   /*untuk menambah panjang canvas biru*/
   min-height: 17050px;
   /**/
@@ -781,7 +781,7 @@ textarea.form-control {
 }
 
 .work-section .container {
-  max-width: 1242px;
+  max-width: 1542px;
 }
 
 .tm-work-item-inner {
