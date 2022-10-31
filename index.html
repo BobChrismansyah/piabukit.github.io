@@ -1,403 +1,651 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" 
-    content="width=device-width, initial-scale=1.0">
-    <link href="img/icon.png" rel="icon">
-    <title>Bob</title>
-</head>
-<body>
+  <head>
+    <title>PPGT Jemaat Bukit Tamalanrea ~ Pia Bukit</title>
+    <link href="assets/img/favicon.png" rel="icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/aos.css">
+        <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="200">
 
-    <div>
-
-
-
-        <style>
-            /**
-       * prism.js Github theme based on GitHub's theme.
-       * @author Sam Clarke
-       */
-      code[class*="language-"],
-      pre[class*="language-"] {
-        color: #333;
-        background: none;
-        font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-        text-align: left;
-        white-space: pre;
-        word-spacing: normal;
-        word-break: normal;
-        word-wrap: normal;
-        line-height: 1.4;
-      
-        -moz-tab-size: 8;
-        -o-tab-size: 8;
-        tab-size: 8;
-      
-        -webkit-hyphens: none;
-        -moz-hyphens: none;
-        -ms-hyphens: none;
-        hyphens: none;
-      }
-      
-      /* Code blocks */
-      pre[class*="language-"] {
-        padding: .8em;
-        overflow: auto;
-        /* border: 1px solid #ddd; */
-        border-radius: 3px;
-        /* background: #fff; */
-        background: #f5f5f5;
-      }
-      
-      /* Inline code */
-      :not(pre) > code[class*="language-"] {
-        padding: .1em;
-        border-radius: .3em;
-        white-space: normal;
-        background: #f5f5f5;
-      }
-      
-      .token.comment,
-      .token.blockquote {
-        color: #969896;
-      }
-      
-      .token.cdata {
-        color: #183691;
-      }
-      
-      .token.doctype,
-      .token.punctuation,
-      .token.variable,
-      .token.macro.property {
-        color: #333;
-      }
-      
-      .token.operator,
-      .token.important,
-      .token.keyword,
-      .token.rule,
-      .token.builtin {
-        color: #a71d5d;
-      }
-      
-      .token.string,
-      .token.url,
-      .token.regex,
-      .token.attr-value {
-        color: #183691;
-      }
-      
-      .token.property,
-      .token.number,
-      .token.boolean,
-      .token.entity,
-      .token.atrule,
-      .token.constant,
-      .token.symbol,
-      .token.command,
-      .token.code {
-        color: #0086b3;
-      }
-      
-      .token.tag,
-      .token.selector,
-      .token.prolog {
-        color: #63a35c;
-      }
-      
-      .token.function,
-      .token.namespace,
-      .token.pseudo-element,
-      .token.class,
-      .token.class-name,
-      .token.pseudo-class,
-      .token.id,
-      .token.url-reference .token.variable,
-      .token.attr-name {
-        color: #795da3;
-      }
-      
-      .token.entity {
-        cursor: help;
-      }
-      
-      .token.title,
-      .token.title .token.punctuation {
-        font-weight: bold;
-        color: #1d3e81;
-      }
-      
-      .token.list {
-        color: #ed6a43;
-      }
-      
-      .token.inserted {
-        background-color: #eaffea;
-        color: #55a532;
-      }
-      
-      .token.deleted {
-        background-color: #ffecec;
-        color: #bd2c00;
-      }
-      
-      .token.bold {
-        font-weight: bold;
-      }
-      
-      .token.italic {
-        font-style: italic;
-      }
-      
-      
-      /* JSON */
-      .language-json .token.property {
-        color: #183691;
-      }
-      
-      .language-markup .token.tag .token.punctuation {
-        color: #333;
-      }
-      
-      /* CSS */
-      code.language-css,
-      .language-css .token.function {
-        color: #0086b3;
-      }
-      
-      /* YAML */
-      .language-yaml .token.atrule {
-        color: #63a35c;
-      }
-      
-      code.language-yaml {
-        color: #183691;
-      }
-      
-      /* Ruby */
-      .language-ruby .token.function {
-        color: #333;
-      }
-      
-      /* Markdown */
-      .language-markdown .token.url {
-        color: #795da3;
-      }
-      
-      /* Makefile */
-      .language-makefile .token.symbol {
-        color: #795da3;
-      }
-      
-      .language-makefile .token.variable {
-        color: #183691;
-      }
-      
-      .language-makefile .token.builtin {
-        color: #0086b3;
-      }
-      
-      /* Bash */
-      .language-bash .token.keyword {
-        color: #0086b3;
-      }
-      
-      /* highlight */
-      pre[data-line] {
-        position: relative;
-        padding: 1em 0 1em 3em;
-      }
-      pre[data-line] .line-highlight-wrapper {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: transparent;
-        display: block;
-        width: 100%;
-      }
-      
-      pre[data-line] .line-highlight {
-        position: absolute;
-        left: 0;
-        right: 0;
-        padding: inherit 0;
-        margin-top: 1em;
-        background: hsla(24, 20%, 50%,.08);
-        background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
-        pointer-events: none;
-        line-height: inherit;
-        white-space: pre;
-      }
-      
-      pre[data-line] .line-highlight:before, 
-      pre[data-line] .line-highlight[data-end]:after {
-        content: attr(data-start);
-        position: absolute;
-        top: .4em;
-        left: .6em;
-        min-width: 1em;
-        padding: 0 .5em;
-        background-color: hsla(24, 20%, 50%,.4);
-        color: hsl(24, 20%, 95%);
-        font: bold 65%/1.5 sans-serif;
-        text-align: center;
-        vertical-align: .3em;
-        border-radius: 999px;
-        text-shadow: none;
-        box-shadow: 0 1px white;
-      }
-      
-      pre[data-line] .line-highlight[data-end]:after {
-        content: attr(data-end);
-        top: auto;
-        bottom: .4em;
-      }html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
-      /* Please visit the URL below for more information: */
-      /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
-      
-        </style>
-          </head>
-          <body for="html-export">
-            <div class="mume markdown-preview  ">
-            <style>
-      
-          h1 {
-              animation: glow 10s ease-in-out infinite;
-      
-          }
-      
-          * {
-              box-sizing: border-box;
-          }
-      
-          body {
-              background: black;
-              overflow: hidden;
-              text-align: center;
-          }
-      
-          figure {
-              animation: wobble 10s ease-in-out infinite;
-              transform-origin: center center;
-              transform-style: preserve-3d;
-              display: block ;
-              position: absolute center;
-          }
-      
-          @keyframes wobble {
-      
-              0%,
-              100% {
-                  transform: rotate3d(1, 1, 0, 40deg);
-              }
-      
-              25% {
-                  transform: rotate3d(-1, 1, , 40deg);
-              }
-      
-              50% {
-                  transform: rotate3d(-1, -1, 0, 40deg);
-              }
-      
-              75% {
-                  transform: rotate3d(1, -1, 0, 40deg);
-              }
-          }
-      
-          h1 {
-              display: block;
-              width: 100%;
-              line-height: 1.5;
-      
-              position: absolute;
-              color: #0a0a0a;
-          }
-      
-          @keyframes glow {
-      
-              0%,
-              100% {
-                  text-shadow: 0 0 30px rgb(0, 255, 34);
-              }
-      
-              25% {
-                  text-shadow: 0 0 30px rgb(255, 0, 0);
-              }
-      
-              50% {
-                  text-shadow: 0 0 30px rgb(255, 238, 0);
-              }
-      
-              75% {
-                  text-shadow: 0 0 30px rgb(0, 21, 255);
-              }
-          }
-      
-          h1:nth-child(2) {
-              transform: translateZ(5px);
-          }
-      
-          h1:nth-child(3) {
-              transform: translateZ(10px);
-          }
-      
-          h1:nth-child(4) {
-              transform: translateZ(15px);
-          }
-      
-          h1:nth-child(5) {
-              transform: translateZ(20px);
-          }
-      
-          h1:nth-child(6) {
-              transform: translateZ(25px);
-          }
-      
-          h1:nth-child(7) {
-              transform: translateZ(30px);
-          }
-      </style>
-          <br>
-          <br>
-          <figure>
-              <h1>Bob Chrismansyah</h1>
-              <h1>Bob Chrismansyah</h1>
-              <h1>Bob Chrismansyah</h1>
-              <h1>Bob Chrismansyah</h1>
-              <h1>Bob Chrismansyah</h1>
-              <h1>Bob Chrismansyah</h1>
-              <h1>Bob Chrismansyah</h1>
-              <pre class="language-text">&lt;h1&gt;Hello World!&lt;/h1&gt; <br> &lt;h2&gt;Saya suka berkontribusi di Project Open Source&lt;/h1&gt; <br> &lt;h1&gt;Sisfo20&lt;/h1&gt; <br> &lt;h1&gt;UH&lt;/h1&gt; <br> &lt;h1&gt;Windows &amp; Arch&lt;/h1&gt; <br> &lt;h1&gt;Midnight&lt;/h1&gt;
-                </pre>
-            </figure>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-12 center-block mt-5">
-            <a href="https://github.com/BobChrismansyah">
-                Github 
-             </a>
-            <br>
-            <hr>
-            <a href="mailto:bob@ilkom.my.id">
-                bob@ilkom.my.id
-            </a>
-            <br>
-            <hr>
-            <a href="https://github.com/BobChrismansyah/BobChrismansyah/blob/main/gpg.txt">
-                gpg
-            </a>
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
         </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    <header class="site-navbar py-3 js-site-navbar site-navbar-target" role="banner" id="site-navbar">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-11 col-xl-2 site-logo">
+            <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0">PPGT JBT</a></h1>
+          </div>
+          <div class="col-12 col-md-10 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
+                <li><a href="#section-home" class="nav-link">Home</a></li>
+                <li class="has-children">
+                  <a href="#section-about" class="nav-link">Pia Bukit</a>
+                  <ul class="dropdown">
+                    <li><a href="#section-how-it-works" class="nav-link">PPGT</a></li>
+                    <li><a href="#section-our-team" class="nav-link">KSB 2020-2022</a></li>
+                  </ul>
+                </li>
+                <li><a href="#section-industries" class="nav-link">Dokumentasi</a></li>
+                <li><a href="#section-blog" class="nav-link">Pengurus</a></li>
+                <li><a href="#blog-lainnya" class="nav-link">Blog lainnya</a></li>
+                <li><a href="#section-contact" class="nav-link">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="site-blocks-cover overlay" style="background-image: url(img/fotobersama_burik.jpg);" data-aos="fade" data-stellar-background-ratio="0.5" id="section-home">
+
+<!-- SLIDER FOTO https://getbootstrap.com/docs/4.1/examples/carousel/ -->
+
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-md-8" data-aos="fade-up" data-aos-delay="0">
+            <h1 class="text-white font-weight-light text-uppercase font-weight-bold" data-aos="fade-up">
+              Pengurus PPGT 2020-2022
+            </h1>
+            <p class="mb-4" data-aos="fade-up" data-aos-delay="0"><b>PPGT Jemaat Bukit Tamalanrea</b></p>
+            <p data-aos="fade-up" data-aos-delay="0">
+              <a href="https://www.instagram.com/pia_bukit/" class="btn btn-primary py-2 px-4 text-white">
+                pia_bukit
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<!--   Banner Baksos -->  
+<picture>  
+  <source 
+     media="(min-width: 650px)" 
+     srcset="img/75% — pra-rapat-anggota.jpeg" >
+  <source 
+     media="(min-width: 465px)"
+     srcset="img/pra-rapat-anggota.jpeg" alt="Pra Rapat Anggota 2022"> 
+     <source 
+     media="(min-width: 1px)"
+     srcset="img/pra-rapat-anggota.jpeg" alt="Pra Rapat Anggota 2022"> 
+
+    <img class="col-md-4 mx-auto d-block row justify-content-center mt-4" src="pra-rapat-anggota.jpeg" style="width:90%;height:100%" 
+  alt="Pra rapat anggota 2022">
+
+</picture>
+
+
+
+
+
+<!-- <div>
+  <div class="row align-items-center justify-content-center text-center">
+    <div data-aos="fade-up">
+      <source media="(min-width: 650px)">
+
+      <a href="https://youtube.com/shorts/j0F5HExn40I?feature=share" class="play-single-small bg-black  mt-2 d-inline-block popup-vimeo"><span class="icon-play"></span></a>
+
+    </div>
+  </div>
+</div> -->
+<br>
+<hr>
+
+
+
+<!-- <div>
+  <div class="mx-auto d-block row justify-content-center mt-5" style="width:90%;height:50%;" data-aos="fade-up" data-aos-delay="300">
+    <img src="img/SPANDUK-DEPAN-1.jpg" alt="Image" class="img-fluid rounded" >
+    <a href="javascript:void(0);" class="" data-toggle="modal" data-target="#tutorialsplaneModal">
+      View Full Image
+    </a>
+  </div>
+  <div class="container" style="padding:50px;">
+
+    
+  
+    <div id="tutorialsplaneModal" class="modal fade" role='dialog'>
+      <div class="modal-dialog modal-lg mt-5">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title center mr-1">Perayaan Paskah PPGT JBT</h4>
+            <p>Silahkan menghubungi <a href="https://api.whatsapp.com/send?text=Shalom. &phone=6282198407500">Pengurus</a> untuk informasi lebih lanjut</p>
+          </div>
+          <div class="modal-body">
+            <img src="img/SPANDUK-DEPAN-1.jpg" style="width:100%;height:100%;">       
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
     </div>
     
-    
-        
-        <!-- <video loop autoplay muted class="VideoMain">
-            <source src="img/ff.mp4" type="video/mp4">
-        </video> -->
-</body>
+  </div>
 
+
+</div>--->
+  
+  <!--Banner LKPD--->
+  
+  
+
+    <div class="site-section" id="section-about">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-5 ml-auto mb-5 order-md-2" data-aos="fade-up" data-aos-delay="0">
+            <img src="img/logo-piabukit.jpg" alt="Image" class="img-fluid rounded">
+          </div>
+          <div class="col-md-6 order-md-1" data-aos="fade-up" data-aos-delay="0">
+            <div class="text-left pb-1 border-primary mb-4">
+              <h2 class="text-primary">Pia Bukit</h2>
+            </div>
+            <p align="justify">&nbsp;&nbsp;&nbsp;<b>
+              Sejak dimekarkan menjadi Jemaat Biringkanaya pada tahun 1992, Cabang Kebaktian Soleman (Jemaat Bukit Tamalanrea) sudah melaksanakan ibadah pemuda yang dilaksanakan setiap hari Sabtu pukul 19. 00 WITA yang dihadiri oleh banyak pemuda (sekitar 50-60 orang setiap ibadah). Juga, letak geografis Jemaat Bukit Tamalanrea berada di antara perguruan tinggi antara lain, Universitas Hasanuddin, Poltek, Universitas Dipa, STMIK AKBA, dan beberapa kampus besar lainnya, sehingga warga jemaat didominasi oleh kaum muda. Kaum muda yang bergabung di Cabang Kebaktian Soleman pada masa ini dikoordinir oleh Yusuf Pongsapan dan Sherly Sandapadang dari awal tahun 90-an dengan melakukan berbagai kegiatan, seperti ibadah pemuda, paduan suara, latihan kepemimpinan, ret-reat, bahkan mengikuti lomba-lomba di tingkat klasis.
+            </b>
+            </p>
+            <p align="justify">&nbsp;&nbsp;&nbsp;<b>
+              Pemuda pun banyak berperan aktif dalam pelayanan-pelayanan di ibadah rumah tangga dan juga dalam proses pembangunan gedung gereja, terutama pada saat pengecoran gedung gereja.</b>
+            </p>
+            <p align="justify">&nbsp;&nbsp;&nbsp;<b>
+              Hingga sekarang PPGT Jemaat Bukit Tamalanrea tetap berperan aktif dalam pelayanan ibadah maupun dalam masyarakat.</b>
+            </p>
+            <p align="justify">&nbsp;&nbsp;&nbsp;
+              PPGT Jemaat Bukit Tamalanrea..
+            </p>
+            <p align="justify">&nbsp;
+              <a href="sejarah-piabukit/index.html">Lanjut baca Sejarah PIA BUKIT...</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section bg-image overlay" style="background-image: url('img/logo-besar.jpg');" id="section-how-it-works">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="font-weight-light text-secondary" data-aos="fade"><p>Pengantar</p>
+              <!-- <teks orange judul tidak ditambahkan> -->
+            </h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="0">
+            <div class="how-it-work-item">
+              <div class="how-it-work-body">
+                <h2>PPGT</h2>
+                <p class="mb-5" align="justify">
+                  PPGT adalah pelayan Tuhan di tengah-tengah dunia, yang diutus ke dalam dunia untuk menyatakan damai sejahtera bagi semua ciptaan. Dalam menyatakan tugas panggilannya, maka pada tangga <b>11 Desember 1962</b>, dibentuklah wadah pelayanan dan kaderisasi pemuda Gereja Toraja yang diberi nama Persekutuan Pemuda Gereja Toraja.
+                </p>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="0">
+            <div class="how-it-work-item">
+              <div class="how-it-work-body">
+                <h2>Bersekutu</h2>
+                <p class="mb-5" align="justify">Dulu bersekutu itu artinya menemui Tuhan di dalam Bait SuciNya melalui perantaraan iman dan dengan syarat mutlak; seekor hewan kurban untuk memohonkan pengampunan dan rahmatNya. Sekarang ini, bersekutu itu artinya bertemu dengan saudara seiman yang didasari atas kesehatian, kerelaan dan kegembiran.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="0">
+            <div class="how-it-work-item">
+              <div class="how-it-work-body">
+                <h2>Bersaksi</h2>
+                <p class="mb-5" align="justify">Bersaksi bukan hanya sekedar berkata-kata tentang pertolongan Tuhan, tetapi menyampaikan tentang berita kesaksian yaitu Injil Yesus Kristus. Dengan demikian hal ini dapat mendorong pemuda Gereja untuk semakin giat bersaksi tentang Kristus dan menjadikannya sebagai gaya hidup.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="0">
+            <div class="how-it-work-item">
+              <div class="how-it-work-body">
+                <h2>Melayani</h2>
+                <p class="mb-5" align="justify">Pelayanan PPGT selalu berpusat pada salib Kristus, yang menyatakan komitmen pelayan yang siap berkorban, siap menderita dan siap menjadi hamba yang melayani.
+                <!-- <p class="mb-5" align="justify">Melayani adalah semua tindakan, baik yang dipikiran, diucapkan dan dilakukan selalu sesuai dengan pikiran dan perasaan Allah. Dalam hal ini inti pelayanan adalah melayani perasaan Bapa dan Tuhan Yesus Kristus. -->
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section border-bottom" id="section-our-team">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="font-weight-light text-primary" data-aos="fade">KSB<br>2020-2022</h2>
+            <p><b></b>KETUA-SEKRETARIS-BENDAHARA</p>
+          </div>
+        </div>
+                <div class="row">
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="0">
+            <div class="person">
+              <img src="img/pak-ketua.jpg" alt="Imageketua" class="img-fluid rounded mb-5 w-75 rounded-circle">
+              <h3>Frederich Tandigau'</h3>
+              <p class="position text-muted">Ketua PPGT Jemaat Bukit Tamalanrea 2020-2021</p>
+              <p class="mb-4" align="justify">
+              <ul>
+                <li>Tempat/Tanggal Lahir : Rantepao, 22 Februari 1997</li>
+                <li>Alamat : Jl. Kowilham III, B5</li>
+                <li>Hobby : Olahraga </li>
+                <li>Motto : "Dont Worry Be Happy, Yoman"</li>
+              </ul></p>
+              <ul class="ul-social-circle">
+                <li><a href=""><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="0">
+            <div class="person">
+              <img src="img/sekertaris.jpg" alt="Imagesekertaris" class="img-fluid rounded mb-5 w-75 rounded-circle">
+              <h3>Ongky</h3>
+              <p class="position text-muted">Sekretaris</p>
+            <p class="mb-4" align="justify">
+              <ul>
+                <li>Tempat/Tanggal : Tarakan, 28 Oktober 1996</li>
+                <li>Alamat : Jl. Bung</li>
+                <li>Hobby : Olahraga & Gamers</li>
+                <li>Motto : "Jalani Hidup Dengan Santai"</li>
+              </ul>
+            </p>
+              <ul class="ul-social-circle">
+                <li><a href="https://www.instagram.com/ongkytamana/"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="0">
+            <div class="person">
+              <img src="img/bendahara.jpg" alt="Imagebendahara" class="img-fluid rounded mb-5 w-75 rounded-circle">
+              <h3>Imelda Ayu Pumpun</h3>
+              <p class="position text-muted">Bendahara</p>
+              <p class="mb-4" align="justify">
+                <ul>
+                <li>Tempat/Tanggal lahir: Makassar, 11 Oktober 2000 </li>
+                <li>Alamat : Jl. PK4 No.26 </li>
+                <li>Hobby : Mendengarkan Musik </li>
+                <li>Motto : Ada-ada ji itu </li>
+              </ul>
+              </p>
+              <ul class="ul-social-circle">
+                <li><a href="https://www.instagram.com/ayupumpun/"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="0">
+            <div class="person">
+              <br>
+              <!-- Cari fotonya -->
+              <!-- <img src="img/#" alt="Image" class="img-fluid rounded mb-5 w-75 rounded-circle"> -->
+              <h3>Andika Rongre</h3>
+              <p class="position text-muted">Wakil Sekretaris</p>
+              <p class="mb-4" align="justify">
+                <ul>
+                  <li>Tempat/Tanggal lahir : -  </li>
+                  <li>Alamat : Jl. Tambasa </li>
+                  <li>Hobby : </li>
+                  <li>Motto : </li>
+              </ul>
+              </p>
+              <ul class="ul-social-circle">
+                <li><a href="https://www.instagram.com/distabunga/"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="site-section" id="section-blog">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="font-weight-light text-primary">Pengurus PPGT</h2>
+            <p class="color-black-opacity-5">Jemaat Bukit Tamalanrea</p>
+          </div>
+        </div>
+        <div class="row mb-5 align-items-stretch">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+            <div class="h-entry">
+              <a href="single.html"><img src="img/manajemen.jpg" alt="Image" class="img-fluid"></a>
+              <h2 class="font-size-regular"><a href="single.html">Bidang Manajemen</a></h2>              
+              <p>
+                <ul>
+                  <li><b>Ketua :<a href="https://www.instagram.com/pedi_tandigau/l"> Frederich Tandigau'</a></b></li>
+                  <li><b>Sekretaris :<a href="https://www.instagram.com/ongkytamana/"> Ongky</a></b></li>
+                  <li><b>Wakil Sekretaris :<a href="https://www.instagram.com/distabunga/"> Andika Rongre</a></b></li>
+                  <li><b>Bendahara :<a href="https://www.instagram.com/ayupumpun/"> Imelda Ayu Pumpun</a></b></li>
+                </ul>
+              </p>
+              <p align="justify">
+                Mengadakan rapat-rapat untuk mengevaluasi, menyusun, membahas program kerja. Bidang manajemen juga bertujuan untuk mendukung program kerja Pengurus PPGT Klasis. Program Kerja lainnya yaitu PAB, Perayaan Pekan Pemuda, Usaha Dana, Pengadaan PDH, dan Sekretariat PPGT.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="0">
+            <div class="h-entry">
+              <a href="single.html"><img src="img/spiritualitas.jpg" alt="Image" class="img-fluid"></a>
+              <h2 class="font-size-regular"><a href="single.html">Bidang Spiritualitas</a></h2>
+              <p>
+                  <b>Koordinator :<a href="https://www.instagram.com/dion_pailang/"> Ridion Pailang</a> </b>
+                  <br>&nbsp;Anggota :
+                    <br><a href="https://www.instagram.com/whindy_tandiele/">&nbsp;&nbsp;&nbsp;&nbsp;Windy Tandiele</a>
+                    <br><a href="https://www.instagram.com/seldi_kabanga/">&nbsp;&nbsp;&nbsp;&nbsp;Seldy Merdekawaty Kabanga'</a>
+                    <br><a href="https://www.instagram.com/navtaa_tanggulungan/">&nbsp;&nbsp;&nbsp;&nbsp; Velisya Meysilis</a>
+              </p>
+              <p align="justify">Setiap kegiatan ibadah PPGT adalah tanggung jawab bidang spiritualitas. Bidang ini bertujuan untuk meningkatkan keimanan anggota PPGT</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="h-entry">
+              <a href="single.html"><img src="img/kaderisasi.jpg" alt="Image" class="img-fluid"></a>
+              <h2 class="font-size-regular"><a href="single.html">Bidang Kaderisasi</a></h2>
+              <p>
+                  <b>Koordinator :<a href="about.html"> Diky Junianto</a> </b>
+                  <br>&nbsp;Anggota :
+                    <br><a href="https://www.instagram.com/delgustndililing/">&nbsp;&nbsp;&nbsp;&nbsp;Ario Reski Sirua</a>
+                    <br>
+                    <a href="https://www.instagram.com/tary_tirhanaym/">&nbsp;&nbsp;&nbsp;&nbsp;Tirhana Yelri Mastarinda
+                    </a>
+              </p>
+              <p align="justify">Bidang ini mempersiapkan calon-calon pemimpin dan pengurus dengan cara mengadakan pelatihan serta pembinaan</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="0">
+            <div class="h-entry">
+              <a href="single.html"><img src="img/pelsos2.jpg" alt="Image" class="img-fluid"></a>
+              <h2 class="font-size-regular"><a href="single.html">Bidang Pelayanan Sosial</a></h2>
+              <p>
+                  <b>Koordinator :<a href="https://www.instagram.com/yohanespararuk/"> Yohanes Pararuk</a> </b>
+                  <br>&nbsp;Anggota :
+                    <br><a href="https://www.instagram.com/ryuann_/">&nbsp;&nbsp;&nbsp;&nbsp;Raflesia Yuannisa</a>
+                    <br><a href="https://www.instagram.com/alenpatiung/">&nbsp;&nbsp;&nbsp;&nbsp;Zhefanya Valentine N. P.</a>
+                    <br><a href="https://www.instagram.com/satriawanotniel/">&nbsp;&nbsp;&nbsp;&nbsp;Otniel Satriawan Bobong</a>
+              </p>
+              <p align="justify">Tujuan bidang ini yaitu mewujudkan kesadaran PPGT dalam kepedulian sesama anggota masyarakat maupun lingkungan baik itu melalui aksi sosial maupun perkunjungan. Contohnya Perkunjungan kepada anggota/pengurus yang sakit</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="0">
+            <div class="h-entry">
+              <a href="single.html"><img src="img/sdm.jpg" alt="Image" class="img-fluid"></a>
+              <h2 class="font-size-regular"><a href="single.html">Bidang Sumber Daya Manusia</a></h2>
+              <p>
+                  <b>Koordinator :<a href="https://www.instagram.com/ajjung21/"> Aljun</a></b>
+                  <br>&nbsp;Anggota :
+                    <br><a href="https://www.instagram.com/datutonapa/">&nbsp;&nbsp;&nbsp;&nbsp;Merchi Limban</a>
+                    <br><a href="https://www.instagram.com/bob.chrismansyah/">&nbsp;&nbsp;&nbsp;&nbsp;Bob Chrismansyah</a>
+                    <br><a href="https://www.instagram.com/haknasegi_/">&nbsp;&nbsp;&nbsp;&nbsp;Egi Haknas</a>
+              </p>
+              <p align="justify">Bidang ini sebagai wadah pembinaan dan sarana untuk menyalurkan bakat dan kekreatifitasan anggota PPGT serta mewujudkan PPGT yang sehat.</p>
+            </div>
+          </div>
+        </div>
+        <!-- <p class="col-12 text-center" data-aos="fade-up" data-aos-delay="2000" ><b>Lihat Juga Blog Lainnya</b></p>
+        <div class="col-12 mt-3 center-block" >
+          <div id="blog" data-aos="fade-up" data-aos-delay="2500">
+            <p class="mb-0"><a href="sejarah-piabukit/index.html" class="btn btn-primary py-5 px-10 text-white">Sejarah PPGT JBT</a></p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="2800">
+            <p class="mb-0"><a href="unitusahaJBT/index.html" class="btn btn-primary py-2 px-4 text-white">Unit Usaha</a></p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="2700">
+            <p class="mb-0"><a href="coming-soon/index.html" class="btn btn-primary py-2 px-4 text-white">Tim Multimedia</a></p>
+          </div>
+           <div data-aos="fade-up" data-aos-delay="2300">
+            <p class="mb-0"><a href="coming-soon/index.html" class="btn btn-primary py-2 px-4 text-white">Gallery Pia Bukit</a></p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="2700">
+            <p class="mb-0"><a href="Ad-ART_piabukit/index_ad_art_bukittamalanrea.html" class="btn btn-primary py-2 px-4 text-white">AD/ART PPGT</a></p>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+    <section class="jumbotron text-center" id="blog-lainnya">
+      <div class="container">
+        <h1 class="jumbotron-heading">Blog Lainnya</h1>
+        <p class="lead text-muted">Lihat juga berbagai blog lain dari kami</p>
+        <p>
+          <a href="AD-ART_piabukit/index_ad_art_bukittamalanrea.html" class="btn btn-primary my-1">AD/ART PPGT</a>
+          <br>
+          <a href="sejarah-piabukit/index.html" class="btn btn-primary my-1">Sejarah PPGT JBT</a>
+          <br>
+          <a href="coming-soon/index.html" class="btn btn-primary my-1">Gallerry Pia Bukit</a>
+          <br>
+          <a href="coming-soon/index.html" class="btn btn-primary my-1">Tim Multimedia</a>
+          <br>
+          <a href="unitusahaJBT/index.html" class="btn btn-primary my-1">Unit Usaha</a>
+          
+          <br>
+        </p>
+      </div>
+    </section>
+
+
+    <div class="site-section block-13" id="section-industries">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="mb-0 text-primary">Dokumentasi</h2>
+            <p class="color-black-opacity-5">Kegiatan PPGT</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="owl-carousel nonloop-block-13">
+        <div>
+          <a href="#" class="unit-1 text-center">
+            <img src="img/kegiatan1.jpg" alt="Image" class="img-fluid">
+            <div class="unit-1-text">
+              <h3 class="unit-1-heading">Screening PPGT</h3>
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <a href="#" class="unit-1 text-center">
+            <img src="img/kegiatan2.jpg" alt="Image" class="img-fluid">
+            <div class="unit-1-text">
+              <h3 class="unit-1-heading">Ibadah Pastoral</h3>
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <a href="" class="unit-1 text-center">
+            <img src="img/kegiatan3.jpg" alt="Image" class="img-fluid">
+            <div class="unit-1-text">
+              <h3 class="unit-1-heading">Ibadah Valentine 2021</h3>
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <a href="https://www.instagram.com/unitusahapiabukit/" class="unit-1 text-center">
+            <img src="img/kegiatan4.jpg" alt="Image" class="img-fluid">
+            <div class="unit-1-text">
+              <h3 class="unit-1-heading">Unit Usaha Tari</h3>
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <a href="#" class="unit-1 text-center">
+            <img src="img/lkpl2021.jpg" alt="Image" class="img-fluid">
+            <div class="unit-1-text">
+              <h3 class="unit-1-heading">LKPL 2021</h3>
+            </div>
+          </a>
+        </div>
+        
+        <!-- <div>
+          <a href="#" class="unit-1 text-center">
+            <img src="img/ibadahppgt30Sep21.jpg" alt="Image" class="img-fluid">
+            <div class="unit-1-text">
+              <h3 class="unit-1-heading">Ibadah Rutin PPGT 30 Sep 21</h3>
+            </div>
+          </a>
+        </div> -->
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="site-blocks-cover overlay inner-page-cover" style="background-image: url(img/logo-piabukit.jpg); background-attachment: fixed;">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-md-7" data-aos="fade-up">
+            <a href="https://drive.google.com/file/d/17jGrhcXe8qxK1UikmdkGZ_uOlFPVEmFB/preview" class="play-single-big mb-4 d-inline-block popup-vimeo"><span class="icon-play"></span></a>
+            <h2 class="text-white font-weight-light mb-5 h1">Video</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- ada item di sini -->
+
+    <div class="site-section bg-light" id="section-contact">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="font-weight-light text-primary">Kontak</h2>
+            <p class="color-black-opacity-5">Lihat update terbaru</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7 mb-5">
+            <div class="p-4 mb-3 bg-white">
+              <h3 class="h5 text-black mb-3">Info Selanjutnya</h3>
+              <p align="justify">Untuk info selanjutnya, silahkan menghubungi pengurus PPGT, bisa melalui nomor yang tertera maupun melalui Instagram <a href="https://www.instagram.com/pia_bukit/">pia_bukit</a></p>
+  <!--<p><a href="#" class="btn btn-primary px-4 py-2 text-white">Learn More</a></p>-->
+            </div>
+            
+          </div>
+          <div class="col-md-5">
+            <div class="p-4 mb-3 bg-white">
+              <p class="mb-0 font-weight-bold">Address</p>
+              <p class="mb-4">Jl. Perintis Kemerdekaan IV No.49, Tamalanrea Jaya, Kec. Tamalanrea, Kota Makassar, Sulawesi Selatan 90245</p>
+              <p class="mb-0 font-weight-bold">Pelsos</p>
+              <p class="mb-4"><a href="https://api.whatsapp.com/send?text=Shalom. &phone=6282198407500">Yohanes Pararuk</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="row">
+              <div class="col-md-5 mr-auto">
+                <h2 class="footer-heading mb-4">Sekret</h2>
+                  <p>Kesekretariatan PPGT Jemaat Bukit Tamalanrea berada di samping kiri Gereja Toraja Jemaat Bukit Tamalanrea
+                  </p>
+                <br>
+                  <!-- <p class="mb-0">Admin web</p> -->
+                  <a class="mb-0 font-weight-bold" href="bob/index.html">Bob~PiaBukit</a>
+                <p class="mb-0 font-weight">Salam Cyber Ministries</p>
+                  <a href="https://www.linkedin.com/in/bob-chrismansyah-380172213/" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+                  <a href="https://www.instagram.com/bob.chrismansyah/" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                 <br>
+              <!-- <p class="mb-0 font-weight-bold">Email Address</p>
+              <p class="mb-0"><a href="mailto:kabangabcp20h@student.unhas.ac.id">kabangabcp20h@student.unhas.ac.id</a></p>
+              <br> -->
+<!--               <p>Klik <a href="https://my.dewabiz.com/aff.php?aff=1509">di sini</a> untuk melihat domain yang PiaBukit gunakan</p>
+              <a href="https://my.dewabiz.com/aff.php?aff=1509"><img src="https://dewabiz.com/assets/images/468X60.jpg" width="400" height="50" border="0"></a> -->
+              
+              </div>
+              <p>&nbsp;</p>
+              <br>
+              <p>&nbsp;</p>
+              <br>
+              <div class="col-md-3">
+                <h2 class="footer-heading mb-4">Quick Links</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#section-home">Home</a></li>
+                  <li><a href="#section-industries">Dokumentasi</a></li>
+                  <li><a href="#section-blog">Pengurus</a></li>
+                </ul>
+              </div>
+              <span>&ldquo;</span>
+              <div class="col-md-3">
+                <h2 class="footer-heading mb-4">Follow Us</h2>
+                <a href="https://web.facebook.com/groups/60527587137" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                <a href="https://www.instagram.com/pia_bukit/" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class="border-top pt-5">
+              <p>
+                <!-- website ini dibuat menggunakan teplate -->
+
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <br>
+            
+            </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  <!-- </div> -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/main.js"></script>
+  </body>
 </html>
