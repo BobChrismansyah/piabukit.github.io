@@ -25,6 +25,100 @@ a:hover {
   text-decoration: none;
 }
 
+/* 3D style */
+.box3d {
+  position: relative;
+  background-color: #0e4caa;
+  border-radius: 10px;
+  height: 350px;
+  transform-style: preserve-3d;
+}
+
+.box3d::before {
+  content: 'PPGT JBT';
+  position: absolute;
+  color: #ffffff;
+  font-size: 5em;
+  font-weight: bold;
+  font-style: italic;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.box3d:hover::before {
+  opacity: 0.2;
+}
+
+.box3d::after {
+  content: 'PIABUKIT';
+  position: absolute;
+  color: #fff;
+  font-size: 4.3em;
+  font-weight: bold;
+  font-style: italic;
+  top: 350px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.box3d:hover::after {
+  opacity: 0.2;
+}
+
+.box-name {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  opacity: 0;
+  transform: translate3d(0, 0, 50px);
+  transition: 0.5s;
+}
+
+.box3d:hover .box-name {
+  top: 20px;
+  opacity: 1;
+}
+
+.keyboard-detail-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 100px);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.box3d:hover .keyboard-detail-button {
+  opacity: 1;
+  bottom: 20px;
+}
+
+.kswb-img {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate3d(-50%, -52%, 80px);
+  max-width: 250px;
+  transition: 0.5s;
+  z-index: 2;
+  filter: brightness(108%);
+}
+
+
+.box3d:hover .keyboard-img {
+  transform: translate3d(-50%, -52%, 100px) rotate(5deg) scale(1.2);
+}
+
+
 h1,
 h2,
 h3,
